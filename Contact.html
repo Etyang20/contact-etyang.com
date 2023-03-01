@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="with=device-width, initial-scale=1.0">
+        <title>MALABA VETERINARY CLINIC</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/abee5816a3.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.jpg"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="About.html">ABOUT</a></li>
+                        <li><a href="Services.html">SERVICES</a></li>
+                        <li><a href="Contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h1>Contact Us</h1>
+
+        </section>
+        <!----------Contact us------>
+        <section class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.29264833407!2d34.
+            276726350000004!3d0.6351650000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177f6e3
+            c7a673355%3A0x14a8ad3ffb866998!2sMalaba!5e0!3m2!1sen!2ske!4v1673855725416!5m2!1sen!2ske"
+             width="600" height="450" style="border:0;" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5>Malaba border</h5>
+                            <p>Along Malaba Uganda Road, opposite KCB Bank near Naivas supermarket</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5>+254746947187</h5>
+                            <p>Monday to Saturday, 8AM to 5PM</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <span>
+                            <h5>info@malabavetclinic.com</h5>
+                            <p>Email Us on Your Querry</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="Contact-col">
+                    <form>
+                        <input type="text" name="name" placeholder="Enter your Name" id="name" autocomplete="off" required >
+                        <input type="email"name="email" placeholder="Enter Email Address" id="email" autocomplete="off" required>
+                        <input type="text"name="subject" placeholder="Enter your subject" id="subject" autocomplete="off" required>
+                        <textarea rows="8" placeholder="Message" required></textarea>
+                        <button type="submit" class="hero-btn red-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-----footer------->
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>We are located at malaba town just opposite KCB bank alongside naivas supermarket</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-telegram"></i>
+            </div>
+            <p>Made by Isaac Etyang MKU<i class="fa fa-heart-o"></i> student Thika main campus</p>
+
+        </section>
+    </body>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        var btn= document.getElementById('btn');
+        btn.addEventListener('click',function(e){
+            e.preventDefault()
+            var name= document.getElementById('name').value;
+            var email= document.getElementById('email').value;
+            var subject= document.getElementById('subject').value;
+            var message= document.getElementById('message').value;
+            var body= 'name:' +name + '</br> email: ' +email + '</br> subject' + 
+            subject + '</br> message' + message;
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "malabaveterinaryclinic@gmail.com",
+    Password : "ehpttoizlgaxbpti",
+    To : 'malabaveterinaryclinic@gmail.com',
+    From :  email,
+    Subject : subject,
+    Body : body
+}).then(
+  message => alert(message)
+);
+        })
+    </script>
+</html>
